@@ -1,0 +1,421 @@
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    padding: 20px;
+    
+}
+
+.container1 {
+    display: flex;
+    justify-content: center;
+    
+    flex-wrap: wrap;
+    max-width: 1200px; /* Ajusta el ancho máximo según sea necesario */
+	margin: 0 auto; 
+}
+
+.container2 {
+    display: flex;
+    justify-content: space-between; /* Distribuye las columnas con espacio entre ellas */
+    flex-wrap: wrap; /* Envuelve el contenido para manejar múltiples líneas */
+    gap: 20px; /* Espacio entre las columnas */
+    max-width: 1200px; /* Ajusta el ancho máximo según sea necesario */
+    margin: 20px auto; /* Centra el contenedor y añade margen */
+}
+
+.column:first-child {
+    flex: 0 0 calc(120% - 10px); /* Ancho del 70% para la primera columna */
+    padding: 5px;
+    
+    border-radius: 5px;
+    box-sizing: border-box; /* Asegura que el padding no aumente el ancho total */
+}
+
+.column:last-child {
+    flex: 0 0 calc(10% - 10px); /* Ancho del 30% para la segunda columna */
+    margin-left: auto;
+	padding: 5px;
+    background-color: #e0e0e0; /* Color de fondo opcional */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Asegura que el padding no aumente el ancho total */
+}
+.column {
+    flex: 1; /* Para que ambas columnas ocupen el mismo espacio */
+    padding: 5px;
+    /* Color de fondo opcional */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Asegura que el padding no aumente el ancho total */
+}
+
+
+.pieces, .puzzle-grid {
+    display: grid;
+    
+}
+.pos {
+    background-color: #A6A6A5;
+    padding: 3px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+	color:black;
+}
+
+.puzzle-grid {
+	display: grid;
+    grid-template-columns: repeat(2, 100px);
+    grid-template-rows: repeat(2, 100px);
+	 gap: 0px;
+	 position: relative;
+	 align-items: center; /* Centrar horizontalmente */
+    justify-content: center;
+	 
+}
+
+.piece {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000;
+    cursor: pointer;
+    background-image: url('imagenes/futuro.png');
+    background-size: 80px 80px;
+}
+.puzzle-piece {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000;
+    cursor: pointer;
+   background-image: url('imagenes/futuro.png');
+    background-size: 200px 200px;
+	opacity: 0.5; /* Baja el nivel de color inicialmente */
+	
+}
+.p1, .p2, .p3, .p4 {
+    position: absolute;
+	z-index: 1; 
+	font-weight: bold;
+     
+}
+
+ .p4 {
+   
+    bottom: 35px;
+    right: 110px;
+}
+ .p3 {
+    
+    bottom: 35px;
+    left: 110px;
+}
+ .p2 {
+    
+    top: 35px;
+    right: 110px;
+}
+ .p1 {
+   
+    top: 35px;
+    left: 110px;
+}
+
+
+.piece.active {
+    border: 2px solid red;
+}
+
+
+
+.puzzle-piece.active {
+    opacity: 1; /* Restablece el nivel de color cuando está activa */
+	
+}
+
+
+.set-position-btn {
+    background-image: url('imagenes/imagen.png');
+	 width: 5px;
+    height: 30px;
+	border-radius: 5px;
+	/*background-size: 10px 10px;*/
+    background-size: 30px 20px; /* Ajusta el tamaño de la imagen para cubrir todo el botón */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen en el botón */
+    padding-left: 30px; /* Ajusta el espacio a la izquierda del texto para dejar espacio para la imagen */
+	top:10px;
+}
+.set-position-btn2 {
+    background-image: url('imagenes/renovar1.png');
+	 width: 5px;
+    height: 30px;
+	border-radius: 5px;
+	/*background-size: 10px 10px;*/
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el botón */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen en el botón */
+    padding-left: 30px; /* Ajusta el espacio a la izquierda del texto para dejar espacio para la imagen */
+}
+
+
+.piece.disabled {
+    opacity: 0.2;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+
+
+
+
+/*----------datosssss-----------*/
+
+
+
+.keyword1,.keyword2,.keyword3,.keyword4
+{
+    width: 80px; /* Tamaño deseado para los campos de entrada */
+    background-color: #FFDE55;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.var-name1,.var-name2,.var-name3,.var-name4{
+    width: 70px; /* Tamaño deseado para los campos de entrada */
+    /*background-color: #FFB1E5;*/
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.value1,.value2,.value3,.value4 {
+    width: 30px; /* Tamaño deseado para los campos de entrada */
+    background-color: #A3A3A3;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+
+
+.instructions {
+    font-size: 15px;
+    margin-bottom: -50px;
+	text-align:left;
+	display: relative;
+}
+
+.keyword {
+    background-color: #FFDE55;
+    padding: 0px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+	color:black;
+}
+.keyword5 {
+    background-color:#A3A3A3;
+    padding: 0px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+	color:black;
+}
+
+
+.content {
+    display: flex;
+    justify-content: space-between;
+	 margin-left: 40px;
+}
+
+.column {
+   
+    margin-left: -120px;
+	padding: 0px;
+}
+
+.variable {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.variable .var-name1,.variable .var-name2,.variable .var-name3,.variable .var-name4  {
+    margin: 0 10px;
+}
+
+
+.check1,.check2, .check3, .check4 {
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.arrows {
+    display: flex;
+    margin-left: 15px;
+}
+
+.arrow {
+    background-color: white;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin: 0 2px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.arrow.active {
+            background-color: red; /* Cambia el color a rojo cuando está activo */
+        }
+
+.arrow img {
+    width: 15px; /* Tamaño deseado para las imágenes de los botones */
+    height: auto; /* Altura automática para mantener la proporción */
+}
+
+
+/* Estilos para botones de flecha deshabilitados */
+.arrow[disabled] {
+    opacity: 0.1; /* Aumentar la opacidad cuando el botón está deshabilitado */
+    cursor: not-allowed; /* Cambiar el cursor a 'no permitido' */
+    background-color: #CCCCCC; /* Cambiar el color de fondo del botón deshabilitado */
+}
+
+/* Estilos para el texto dentro de los botones de flecha deshabilitados */
+.arrow[disabled] img {
+    filter: grayscale(100%); /* Convertir la imagen en escala de grises */
+
+}
+.close-btn {
+    margin-left: 440px;
+	margin-top: 10px;
+   
+    background-color: #ff5c5c;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+	 z-index: 3;
+}
+
+
+
+
+.subt span {
+        margin-right: 32px; /* Ajusta el valor según sea necesario */
+		font-weight: bold;
+		
+    }
+.subt{
+	margin-left: -8px;
+	text-align:left;
+	}	
+.grid {
+    margin-right: 90px; /* Ajusta el margen superior según sea necesario */
+}
+
+
+	
+.button-container button.clicked {
+    background-color: white; /* Cambiar color al hacer clic */
+}
+.close-btn.clicked{
+	background-color: white;
+    color: black;
+    
+}
+
+
+.button-containerh {
+    display: flex;
+    justify-content: space-between; /* Espacia los botones */
+    width: 100%;
+    margin-top: -10px;
+	position: relative;
+	z-index: 3;
+	
+}
+
+.izq-btn, .der-btn {
+	position: relative;
+    background-color: #00a2ff;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+	
+}
+
+.izq-btn img, .der-btn img {
+    width: 20px; /* Tamaño deseado para las imágenes de los botones */
+    height: auto; /* Altura automática para mantener la proporción */
+}
+
+.der-btn {
+    margin-left: auto; /* Asegura que el botón derecho esté separado */
+}
+
+.der-btn:disabled {
+    background-color: lightgray; /* Color cuando está desactivado */
+    color: gray; /* Color del texto cuando está desactivado */
+    opacity: 0.1; /* Opacidad cuando está desactivado */
+}
+
+.der-btn:not(:disabled) {
+    background-color: #00a2ff; /* Color original cuando está activado */
+    color: white; /* Color del texto cuando está activado */
+    opacity: 1; /* Opacidad cuando está activado */
+}
+
+.izq-btn:disabled {
+    background-color: lightgray; /* Color cuando está desactivado */
+    color: gray; /* Color del texto cuando está desactivado */
+    opacity: 0.1; /* Opacidad cuando está desactivado */
+}
+
+.close-btn.clicked{
+	background-color: white;
+    color: black;
+    
+}
+
+.button-containerh button.clicked {
+    background-color: white; /* Cambiar color al hacer clic */
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    text-align: center;
+	border-radius: 15px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
