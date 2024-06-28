@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantilla Responsive</title>
+    <link rel="stylesheet" href="stylesP.css">
+	<link rel="stylesheet" href="stylesjd.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+</head>
+<body>
+		<div class="header">
+				<button class="close-btn" onclick="close1()"><strong>X</strong></button>
+		</div>
+				
+
+        <section class="content">
+            
+               
+            <div class="card">
+				<div class="instructions">
+					<h3 style="color: #19DF00">Arma el rompecabezas.</h3>
+					
+					<strong><span class="inst">INSTRUCCIONES</span><br></strong>
+					
+					<ul>
+						<li>Crea variables tipo <span class="keyword">decimal</span>. </li>
+						<li>El valor sera la posición de la pieza, posición : (<span class="pos">0,0</span>) (<span class="pos">0,1</span>) (<span class="pos">1,0</span>) (<span class="pos">1,1</span>) .</li>
+					</ul>
+				
+				</div>
+				
+			</div>
+			
+			<br>
+            <div class="card">
+				<h3>Rompecabezas</h3>
+				<div class="puzzle-grid">
+					<span class="p1"> 0,0</span> <div class="puzzle-piece" data-pos="0-0"></div>
+					<span class="p2"> 0,1</span> <div class="puzzle-piece" data-pos="0-1"></div>
+					<span class="p3"> 1,0</span> <div class="puzzle-piece" data-pos="1-0"></div>
+					<span class="p4"> 1,1</span> <div class="puzzle-piece" data-pos="1-1"></div>
+				</div>
+            </div>
+            </div>
+			
+			
+			<div class="card">
+			<div class="container1">
+				<div class="subt">
+				<span class="subt">Tipo</span>
+				<span class="subt">Nombre</span>
+				<span class="subt">Valor</span>
+								
+				</div>
+				<div class="container2">
+					<div class="column" id="input-column">
+					
+					<span class="subt0">X,Y</span> 	<br>
+					
+					<input type="text" class="keyword1">
+					<input type="text" class="var-name1">
+					<span> = </span>
+					<input type="text" id="position1" class="value1">			
+					<button id="set-position1" class="set-position-btn"></button>
+					<button id="actualizar1" class="set-position-btn2"></button>
+					<div class="check1"></div><br>
+					
+					<input type="text" class="keyword2">
+					<input type="text" class="var-name2">
+					<span> = </span>
+					<input type="text" id="position2" class="value2">			
+					<button id="set-position2" class="set-position-btn"></button>
+					<button id="actualizar2" class="set-position-btn2"></button>
+					<div class="check2"></div><br>
+					
+					<input type="text" class="keyword3">
+					<input type="text" class="var-name3">
+					<span> = </span>
+					<input type="text" id="position3" class="value3">			
+					<button id="set-position3" class="set-position-btn"></button>
+					<button id="actualizar3" class="set-position-btn2"></button>
+					<div class="check3"></div><br>
+					
+					<input type="text" class="keyword4">
+					<input type="text" class="var-name4">
+					<span> = </span>
+					<input type="text" id="position4" class="value4">			
+					<button id="set-position4" class="set-position-btn"></button>
+					<button id="actualizar4" class="set-position-btn2"></button>
+					<div class="check4"></div><br>
+					
+				
+					
+				</div>
+
+				<div class="column" id="pieces-column">
+					<h3>Piezas</h3>
+					<div class="pieces">
+						<div class="piece" data-piece="0-0" style="background-position: 0% 0%;"></div>
+						<div class="piece" data-piece="0-1" style="background-position: 100% 0%;"></div>
+						<div class="piece" data-piece="1-0" style="background-position: 0% 100%;"></div>
+						<div class="piece" data-piece="1-1" style="background-position: 100% 100%;"></div>
+					</div>
+				</div>
+				</div>
+		</div>
+
+				<br><br>
+				<div class="button-containerh">
+					<button class="izq-btn" onclick="anterior()" ><img src="imagenes/anterior.png" alt="anterior"></button>
+					<button id="siguiente-btn" class="der-btn" onclick="siguiente()" disabled><img src="imagenes/siguiente.png" alt="siguiente"></button>
+				</div>
+            </div>
+		
+        </section>
+  
+	<!-- Capa del modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <img src="imagen/futuro.png" alt="Gato ingresando a casa">
+            <p class="message">¡Felicidades! ¡Armaste el rompecabezas!</p>
+			<strong><label>Aprendiste a declarar datos tipo decimal<label></strong><br><br>
+            <button class="Siguiente" onclick="nextLesson()">Siguiente lección</button>
+        </div>
+    </div>	
+    <script src="scriptj2.js"></script>
+
+
+</body>
+</html>
