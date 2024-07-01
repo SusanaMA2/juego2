@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Arrastrar y Soltar</title>
+	<link rel="stylesheet" href="stylesP.css">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+		<div class="header">
+				<button class="close-btn" onclick="close1()"><<img src="imagenes/casa.png" alt="Caja" class="logo"></button>
+		</div>
+		<section class="content">
+           <div class="card">
+				<h1>Juego de Arrastrar y Soltar valores enteros</h1>
+				<div id="cloud" class="cloud">
+					<span class="draggable" draggable="true">1</span>
+					<span class="draggable" draggable="true">2,5</span>
+					<span class="draggable" draggable="true">a</span>
+					<span class="draggable" draggable="true">-3</span>
+					<span class="draggable" draggable="true">4050</span>
+					<span class="draggable" draggable="true">B</span>
+					<span class="draggable" draggable="true">7,1</span>
+					<span class="draggable" draggable="true">0</span>
+				</div>
+				
+				<div id="storage" class="storage">
+					<h2>Enteros</h2>	
+					<div id="storage-content" class="storage-content"></div>
+				</div>
+				<br>
+				<div class="button-containerh">
+					<button class="izq-btn" onclick="anterior()" ><img src="imagenes/anterior.png" alt="anterior"></button>
+					<button id="siguiente-btn" class="der-btn" onclick="siguiente()" disabled><img src="imagenes/siguiente.png" alt="siguiente"></button>
+				</div>
+			</div>
+		</section>	
+		
+		<!-- Capa del modal -->
+    <div id="overlay" class="overlay">
+        <img id="startImage" src="imagenes/recuerda.png" alt="Inicio del juego">
+    </div>
+    <script src="scriptjuego.js"></script>
+</body>
+</html>

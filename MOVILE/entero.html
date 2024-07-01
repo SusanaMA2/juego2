@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantilla Responsive</title>
+    <link rel="stylesheet" href="stylesP.css">
+	<link rel="stylesheet" href="stylese.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+</head>
+<body>
+		<div class="header">
+				<button class="close-btn" onclick="close1()"><img src="imagenes/casa.png" alt="Caja" class="logo"></button>
+		</div>
+				
+
+        <section class="content">
+            
+               
+            <div class="card">
+				<div id="contents0" class="contents0">
+					
+					<h3 id="txt" class="txt" style="color: white;">Ya reconocistes los numeros enteros.<br>Aprenderas a utilizar estos números y a declararlos como entero.</h3>
+					
+				</div>
+								
+				<div id="contents" class="contents hidden">
+					 <h2 class="titulo-blanco">Selecciona el tipo</h2>
+				
+						<div class="botones-container2">
+							<button class="tiposentero" id="tiposentero">entero</button>
+						</div>
+						<img src="imagenes/mano.png" alt="Caja" class="box-image1 mano1">
+						<div class="botones-container1">
+							<div class="tiposbtn">
+								<button class="tiposbtn" >decimal</button>
+								<button class="tiposbtn">caracter</button>                    
+							</div>
+						</div>
+						<img src="imagenes/cofre.png" alt="Caja" class="box-image box-image-2">
+				</div>
+				<div id="contents1" class="contents1 hidden ">
+					 <h2 class="titulo-blanco">Escribe un nombre cualquiera</h2>
+				
+						<div class="botones-container2">
+							
+						</div>
+						
+						<div class="botones-container1">
+							<div class="tiposbtn">
+								                   
+							</div>
+						</div>
+						<img src="imagenes/cofre.png" alt="Caja" class="box-image box-image-2">
+				</div>
+				
+			</div>
+			
+			
+			
+			
+            <div class="card">
+				<img src="imagenes/rn.png" alt="" class="img-rn">
+				<img src="imagenes/rv.png" alt="" class="img-rv">
+  
+				<div id="card0" class="card0 hidden">
+				<div class="subts">
+                        <span class="subtst" id="subtst" style="margin-left: 0px;color:#E7BA00">Tipo</span>
+                        <span class="subtsn" id="subtsn" style="margin-left: 90px;">Nombre</span>
+                        <span class="subts" style="margin-left: 60px;"> </span>
+						<span class="subtsv"  id="subtsv"style="margin-left: 60px;"> Valor</span>
+                </div>
+                <div class="button-container">
+					<button class="btn btn-1" id="btn-1"></button>
+					 <input type="text" id="btn-2" name="btn-2" disabled></button>
+					<button class="btn btnigual">=</button>
+					 <input type="text" id="btn-3" name="btn-3" disabled></button>
+				</div>
+				<div class="button-containerh">
+					<button class="izq-btn" onclick="anterior()" disabled><img src="imagenes/anterior.png" alt="anterior"></button>
+					<button id="siguiente-btn" class="der-btn" onclick="siguiente()" disabled><img src="imagenes/siguiente.png" alt="siguiente"></button>
+				</div>
+				
+				</div>
+				
+            </div>
+			
+			
+        </section>
+  
+	
+    <script src="script.js"></script>
+
+
+</body>
+</html>

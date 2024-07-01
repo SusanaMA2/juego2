@@ -1,0 +1,183 @@
+
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.storage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+    /*border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;*/
+    width: 80%;
+    max-width: 600px;
+}
+
+.storage h2 {
+    margin-bottom: 10px; /* Espacio entre el título y el área de almacenamiento */
+}
+
+.cloud {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 50px;
+    /*border: 2px solid #ccc;*/
+    /*border-radius: 10px;*/
+    /*background-color: #fff;*/
+    width: 100%;
+    max-width: 400px;
+    min-height: 250px;
+	background-size: 390px 250px;
+	background-image: url('imagenes/nubenumeros.png'); /* Ruta de tu imagen de fondo */
+}
+
+.draggable {
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #5EAFDD;
+    cursor: grab;
+}
+
+.storage-content {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 50px; /* Ajustar según sea necesario para visualización */
+    border: 2px dashed #aaa; /* Borde punteado para destacar el área */
+    padding: 10px;
+    margin-top: 10px;
+}
+
+/* Estilos para las imágenes de advertencia */
+.warning-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-10%, 40%);
+    max-width: 60%;
+    max-height: 60%;
+    display: none; /* Inicialmente oculto */
+}
+
+
+/*botones*/
+
+.header {
+	display: flex;
+    border-radius: 10px;
+    font-size: 24px;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+
+.close-btn {
+    margin-left: 440px;
+	margin-top: 10px;
+   
+    background-color: #ff5c5c;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+	 z-index: 3;
+}
+
+
+.header-text {
+    font-weight: bold;
+}
+
+
+/*bajo*/
+.button-containerh {
+    display: flex;
+    justify-content: space-between; /* Espacia los botones */
+    width: 100%;
+    margin-top: -10px;
+	position: relative;
+	z-index: 3;
+	
+}
+
+.izq-btn, .der-btn {
+	position: relative;
+    background-color: #00a2ff;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+	
+}
+
+.izq-btn img, .der-btn img {
+    width: 20px; /* Tamaño deseado para las imágenes de los botones */
+    height: auto; /* Altura automática para mantener la proporción */
+}
+
+.der-btn {
+    margin-left: auto; /* Asegura que el botón derecho esté separado */
+}
+
+.der-btn:disabled {
+    background-color: lightgray; /* Color cuando está desactivado */
+    color: gray; /* Color del texto cuando está desactivado */
+    opacity: 0.1; /* Opacidad cuando está desactivado */
+}
+
+.der-btn:not(:disabled) {
+    background-color: #00a2ff; /* Color original cuando está activado */
+    color: white; /* Color del texto cuando está activado */
+    opacity: 1; /* Opacidad cuando está activado */
+}
+
+.izq-btn:disabled {
+    background-color: lightgray; /* Color cuando está desactivado */
+    color: gray; /* Color del texto cuando está desactivado */
+    opacity: 0.1; /* Opacidad cuando está desactivado */
+}
+
+.close-btn.clicked{
+	background-color: white;
+    color: black;
+    
+}
+
+.button-containerh button.clicked {
+    background-color: white; /* Cambiar color al hacer clic */
+}
+
+/*primer cambio*/
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro con 50% de opacidad */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+#startImage {
+    max-width: 100%;
+    max-height: 100%;
+}
